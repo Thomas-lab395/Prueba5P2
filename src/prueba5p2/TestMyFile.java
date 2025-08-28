@@ -41,11 +41,19 @@ public class TestMyFile{
                         mf.getInfo();
                         break;
                     case 3:
-                        mf.crearArchivo();
-                        break;
+                    System.out.print("Ingrese la ruta y nombre del archivo: ");
+                    scanner.nextLine(); 
+                    String archivo = scanner.nextLine();
+                    mf.setFile(archivo);
+                    mf.crearArchivo();
+                    break;
                     case 4:
-                        mf.crearFolder();
-                        break;
+                    System.out.print("Ingrese la ruta del folder: ");
+                    scanner.nextLine(); 
+                    String carpeta = scanner.nextLine();
+                    mf.setFile(carpeta);
+                    mf.crearFolder();
+                    break;
                     case 5:
                         if (mf.borrar()) {
                             System.out.println("se ha borrado.");
